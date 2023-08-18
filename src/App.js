@@ -14,9 +14,8 @@ function App() {
       <p style={{ color: 'blue', fontFamily: 'Arial' }}>Hello world!</p>
       <form>
         <input type={'text'} />
-        <br />
-        <img height={'200px'} src="https://programmerhumor.io/wp-content/uploads/2023/01/programmerhumor-io-javascript-memes-backend-memes-80da323d5892363-608x823.jpg" />
       </form>
+      <img height={'200px'} src="https://programmerhumor.io/wp-content/uploads/2023/01/programmerhumor-io-javascript-memes-backend-memes-80da323d5892363-608x823.jpg" />
     </div>
   );
 
