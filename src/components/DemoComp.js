@@ -1,5 +1,8 @@
 // class component 
-class DemoComp {
+
+import { Component } from "react";
+
+class DemoComp extends Component {
 
     render() {
         return (
@@ -13,7 +16,7 @@ class DemoComp {
 
 export default DemoComp;
 
-// function component with arrow function syntax 
+// function component with arrow function syntax
 // const DemoComp = () => {
 
 //     return (
@@ -27,7 +30,7 @@ export default DemoComp;
 
 // export default DemoComp;
 
-// function component with old JS function syntax 
+// function component with old JS function syntax
 // function DemoComp() {
 
 // };
