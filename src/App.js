@@ -9,11 +9,9 @@ function App() {
       <DemoComp />
     </div>
   );
-
 }
 
 export default App;
-
 
 
 // components, JSX, state, props 
