@@ -1,19 +1,28 @@
 
+// components, JSX, state, props 
+// JSX - 
+// 1. Returns only one element 
+// 2. All tags should be closed 
+
 function App() {
 
   return (
     <div>
-      {/* <p style={{ color: 'blue', fontFamily: 'calibri' }}>Hello world!</p> */}
       <p>Hello world!</p>
-    </div >
+      {/* <p style="color: blue">Hello world!</p> */}
+      <p style={{ color: 'blue' }}>Hello world!</p>
+      <p style={{ color: 'blue', fontFamily: 'Arial' }}>Hello world!</p>
+      <form>
+        <input type={'text'} />
+        <br />
+        <img height={'200px'} src="https://programmerhumor.io/wp-content/uploads/2023/01/programmerhumor-io-javascript-memes-backend-memes-80da323d5892363-608x823.jpg" />
+      </form>
+    </div>
   );
 
 }
 
 export default App;
-
-
-
 
 
 
