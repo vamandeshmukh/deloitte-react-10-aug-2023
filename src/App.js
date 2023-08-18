@@ -1,8 +1,10 @@
 
 // components, JSX, state, props 
+
 // JSX - 
 // 1. Returns only one element 
 // 2. All tags should be closed 
+// 3. camelCase attributes 
 
 function App() {
 
