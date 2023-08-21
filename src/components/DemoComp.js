@@ -1,30 +1,65 @@
 
-
 import { useState } from "react";
 
+// form in react 
 const DemoComp = () => {
 
-    // const [empData, setEmpData] = useState({ eid: 101, firstName: 'Sonu', salary: 10.50 });
-    const [empList, setEmpList] = useState([
-        { eid: 101, firstName: 'Sonu', salary: 10.50 },
-        { eid: 102, firstName: 'Monu', salary: 15.50 },
-        { eid: 103, firstName: 'Tonu', salary: 12.50 }
-    ]);
+    const [empData, setEmpData] = useState({ eid: '', firstName: '', salary: '' });
 
     return (
         <div>
             <h1>Demo Component</h1>
             <p>This is demo component.</p>
-            <p>EID NAME SALARY</p>
-            <p> {empList.map((e) => {
-                return <div><span>{e.eid}</span><span>{e.firstName}</span><span>{e.salary}</span></div>
-            })
-            } </p>
+            <div>
+                <form>
+                    <input type={'number'} name="eid" value={empData.eid}
+                        onChange={(evt) => { setEmpData({ eid: evt.target.value }); }} placeholder="Eid" />
+                    <input type={'text'} name="firstName" value={empData.firstName}
+                        onChange={(evt) => { setEmpData({ firstName: evt.target.value }); }} placeholder="First name" />
+                    <input type={'number'} name="salary" value={empData.salary}
+                        onChange={(evt) => { setEmpData({ salary: evt.target.value }); }} placeholder="salary" />
+                </form>
+            </div>
+
+            <div>
+                <p>Form data as entered:</p>
+                <p>Eid: {empData.eid} </p>
+                <p>Name: {empData.firstName}</p>
+                <p>Salary: {empData.salary}</p>
+            </div>
+
         </div>
     );
 };
 
 export default DemoComp;
+
+
+// import { useState } from "react";
+
+// const DemoComp = () => {
+
+//     // const [empData, setEmpData] = useState({ eid: 101, firstName: 'Sonu', salary: 10.50 });
+//     const [empList, setEmpList] = useState([
+//         { eid: 101, firstName: 'Sonu', salary: 10.50 },
+//         { eid: 102, firstName: 'Monu', salary: 15.50 },
+//         { eid: 103, firstName: 'Tonu', salary: 12.50 }
+//     ]);
+
+//     return (
+//         <div>
+//             <h1>Demo Component</h1>
+//             <p>This is demo component.</p>
+//             <p>EID NAME SALARY</p>
+//             <p> {empList.map((e) => {
+//                 return <div><span>{e.eid}</span><span>{e.firstName}</span><span>{e.salary}</span></div>
+//             })
+//             } </p>
+//         </div>
+//     );
+// };
+
+// export default DemoComp;
 
 
 // import { useState } from "react";
