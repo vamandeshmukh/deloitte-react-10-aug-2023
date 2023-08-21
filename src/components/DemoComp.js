@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-// form in react 
+// form in react with bootstrap  
 const DemoComp = () => {
 
     const [empData, setEmpData] = useState({ eid: '', firstName: '', salary: '' });
@@ -15,7 +15,6 @@ const DemoComp = () => {
 
     const handleEmpSubmit = (evt) => {
         console.log(empData);
-        alert('Sobmitted!');
         setEmpData2(empData);
         setEmpData({ eid: '', firstName: '', salary: '' });
         evt.preventDefault();
@@ -23,48 +22,36 @@ const DemoComp = () => {
 
     return (
         <div className="container">
-            <h1>Demo Component</h1>
-            <p>This is demo component.</p>
-            <div>
-                <form onSubmit={handleEmpSubmit}>
-                    <input type={'number'} name="eid" value={empData.eid}
-                        onChange={handleEmpInput} placeholder="Eid" />
-                    <input type={'text'} name="firstName" value={empData.firstName}
-                        onChange={handleEmpInput} placeholder="First name" />
-                    <input type={'number'} name="salary" value={empData.salary}
-                        onChange={handleEmpInput} placeholder="salary" />
-                    <input type={'submit'} value="Submit" />
-                </form>
-                {/* <form >
-                    <input type={'number'} name="eid" value={empData.eid}
-                        onChange={handleEmpInput} placeholder="Eid" />
-                    <input type={'text'} name="firstName" value={empData.firstName}
-                        onChange={handleEmpInput} placeholder="First name" />
-                    <input type={'number'} name="salary" value={empData.salary}
-                        onChange={handleEmpInput} placeholder="salary" />
-                    <input type={'button'} value="Submit" onClick={handleEmpSubmit} />
-                </form> */}
-                {/* <form>
-                    <input type={'number'} name="eid" value={empData.eid}
-                        onChange={(evt) => { setEmpData({ eid: evt.target.value }); }} placeholder="Eid" />
-                    <input type={'text'} name="firstName" value={empData.firstName}
-                        onChange={(evt) => { setEmpData({ firstName: evt.target.value }); }} placeholder="First name" />
-                    <input type={'number'} name="salary" value={empData.salary}
-                        onChange={(evt) => { setEmpData({ salary: evt.target.value }); }} placeholder="salary" />
-                </form> */}
-            </div>
-
-            <div>
-                <h4>Form data as entered:</h4>
-                <p>Eid: {empData.eid} </p>
-                <p>Name: {empData.firstName}</p>
-                <p>Salary: {empData.salary}</p>
-            </div>
-            <div>
-                <h4>Form data after submit:</h4>
-                <p>Eid: {empData2.eid} </p>
-                <p>Name: {empData2.firstName}</p>
-                <p>Salary: {empData2.salary}</p>
+            <p>Demo component</p>
+            <p className="display-3 text-primary mx-3 my-3 px-3 py-3">Employee Data Form</p>
+            <hr />
+            <div className="row my-3 justify-content-center">
+                <div className="col-3 mx-3 my-3 py-3 border rounded shadow">
+                    <p className="lead my-1">Please enter:</p>
+                    <form className="form form-group" onSubmit={handleEmpSubmit}>
+                        <input className="form-control my-1" type={'number'} name="eid" value={empData.eid}
+                            onChange={handleEmpInput} placeholder="*Eid" required />
+                        <input className="form-control my-1" type={'text'} name="firstName" value={empData.firstName}
+                            onChange={handleEmpInput} placeholder="First name" />
+                        <input className="form-control my-1" type={'number'} name="salary" value={empData.salary}
+                            onChange={handleEmpInput} placeholder="Salary" />
+                        <input className="form-control btn btn-outline-primary my-1" type={'submit'} value="Submit" />
+                    </form>
+                </div>
+                <div className="col-3 mx-3 my-3 py-3 border rounded shadow">
+                    <p className="lead my-1">Entered data:</p>
+                    <hr />
+                    <p>Eid: {empData.eid} </p>
+                    <p>Name: {empData.firstName}</p>
+                    <p>Salary: {empData.salary}</p>
+                </div>
+                <div className="col-3 mx-3 my-3 py-3 border rounded shadow">
+                    <p className="lead my-1">Submitted data:</p>
+                    <hr />
+                    <p>Eid: {empData2.eid} </p>
+                    <p>Name: {empData2.firstName}</p>
+                    <p>Salary: {empData2.salary}</p>
+                </div>
             </div>
 
         </div>
@@ -72,6 +59,81 @@ const DemoComp = () => {
 };
 
 export default DemoComp;
+
+
+// import { useState } from "react";
+
+// // form in react
+// const DemoComp = () => {
+
+//     const [empData, setEmpData] = useState({ eid: '', firstName: '', salary: '' });
+//     const [empData2, setEmpData2] = useState({ eid: '', firstName: '', salary: '' });
+
+//     const handleEmpInput = (evt) => {
+//         console.log(evt.target.name);
+//         console.log(evt.target.value);
+//         setEmpData({ ...empData, [evt.target.name]: evt.target.value });
+//     };
+
+//     const handleEmpSubmit = (evt) => {
+//         console.log(empData);
+//         alert('Sobmitted!');
+//         setEmpData2(empData);
+//         setEmpData({ eid: '', firstName: '', salary: '' });
+//         evt.preventDefault();
+//     };
+
+//     return (
+//         <div>
+//             <h1>Demo Component</h1>
+//             <p>This is demo component.</p>
+//             <div>
+//                 <form onSubmit={handleEmpSubmit}>
+//                     <input type={'number'} name="eid" value={empData.eid}
+//                         onChange={handleEmpInput} placeholder="Eid" />
+//                     <input type={'text'} name="firstName" value={empData.firstName}
+//                         onChange={handleEmpInput} placeholder="First name" />
+//                     <input type={'number'} name="salary" value={empData.salary}
+//                         onChange={handleEmpInput} placeholder="salary" />
+//                     <input type={'submit'} value="Submit" />
+//                 </form>
+//                 {/* <form >
+//                     <input type={'number'} name="eid" value={empData.eid}
+//                         onChange={handleEmpInput} placeholder="Eid" />
+//                     <input type={'text'} name="firstName" value={empData.firstName}
+//                         onChange={handleEmpInput} placeholder="First name" />
+//                     <input type={'number'} name="salary" value={empData.salary}
+//                         onChange={handleEmpInput} placeholder="salary" />
+//                     <input type={'button'} value="Submit" onClick={handleEmpSubmit} />
+//                 </form> */}
+//                 {/* <form>
+//                     <input type={'number'} name="eid" value={empData.eid}
+//                         onChange={(evt) => { setEmpData({ eid: evt.target.value }); }} placeholder="Eid" />
+//                     <input type={'text'} name="firstName" value={empData.firstName}
+//                         onChange={(evt) => { setEmpData({ firstName: evt.target.value }); }} placeholder="First name" />
+//                     <input type={'number'} name="salary" value={empData.salary}
+//                         onChange={(evt) => { setEmpData({ salary: evt.target.value }); }} placeholder="salary" />
+//                 </form> */}
+//             </div>
+
+//             <div>
+//                 <h4>Form data as entered:</h4>
+//                 <p>Eid: {empData.eid} </p>
+//                 <p>Name: {empData.firstName}</p>
+//                 <p>Salary: {empData.salary}</p>
+//             </div>
+//             <div>
+//                 <h4>Form data after submit:</h4>
+//                 <p>Eid: {empData2.eid} </p>
+//                 <p>Name: {empData2.firstName}</p>
+//                 <p>Salary: {empData2.salary}</p>
+//             </div>
+
+//         </div>
+//     );
+// };
+
+// export default DemoComp;
 
 
 // import { useState } from "react";
