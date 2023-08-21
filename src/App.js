@@ -1,5 +1,6 @@
 
 import DemoComp from "./components/DemoComp";
+import Parent from "./components/Parent";
 
 function App() {
 
@@ -7,8 +8,9 @@ function App() {
     <div>
       <h1>App Component</h1>
       <p>This is App component.</p>
-      <DemoComp />
-      <DemoComp />
+      <Parent />
+      {/* <DemoComp /> */}
+      {/* <DemoComp /> */}
     </div>
   );
 
