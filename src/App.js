@@ -1,6 +1,7 @@
 
 import DemoComp from "./components/DemoComp";
 import Parent from "./components/Parent";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   console.log('App');
@@ -8,8 +9,10 @@ function App() {
   return (
     <div>
       <div>
-        <h1>App Component</h1>
-        <p>This is App component.</p>
+        <div className="container">
+          <h1>App Component</h1>
+          <p>This is App component.</p>
+        </div>
         {/* <Parent /> */}
         <DemoComp />
         {/* <DemoComp /> */}

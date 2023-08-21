@@ -5,6 +5,7 @@ import { useState } from "react";
 const DemoComp = () => {
 
     const [empData, setEmpData] = useState({ eid: '', firstName: '', salary: '' });
+    const [empData2, setEmpData2] = useState({ eid: '', firstName: '', salary: '' });
 
     const handleEmpInput = (evt) => {
         console.log(evt.target.name);
@@ -15,12 +16,13 @@ const DemoComp = () => {
     const handleEmpSubmit = (evt) => {
         console.log(empData);
         alert('Sobmitted!');
+        setEmpData2(empData);
         setEmpData({ eid: '', firstName: '', salary: '' });
         evt.preventDefault();
     };
 
     return (
-        <div>
+        <div className="container">
             <h1>Demo Component</h1>
             <p>This is demo component.</p>
             <div>
@@ -53,10 +55,16 @@ const DemoComp = () => {
             </div>
 
             <div>
-                <p>Form data as entered:</p>
+                <h4>Form data as entered:</h4>
                 <p>Eid: {empData.eid} </p>
                 <p>Name: {empData.firstName}</p>
                 <p>Salary: {empData.salary}</p>
+            </div>
+            <div>
+                <h4>Form data after submit:</h4>
+                <p>Eid: {empData2.eid} </p>
+                <p>Name: {empData2.firstName}</p>
+                <p>Salary: {empData2.salary}</p>
             </div>
 
         </div>
