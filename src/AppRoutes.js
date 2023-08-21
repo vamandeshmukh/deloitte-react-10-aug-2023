@@ -9,15 +9,19 @@ const AppRoutes = () => {
 
     return (
         <div>
-            <Header />
             <BrowserRouter>
-                <Routes>
-                    <Route path="home" element={<Home />} />
-                    <Route path="demo" element={<DemoComp />} />
-                    <Route path="parent" element={<Parent />} />
-                    <Route path="" element={<Home />} />
-                    <Route path="*" element={<Page404 />} />
-                </Routes>
+                <div>
+                    <Header />
+                </div>
+                <div>
+                    <Routes>
+                        <Route path="home" element={<Home />} />
+                        <Route path="demo" element={<DemoComp />} />
+                        <Route path="parent" element={<Parent />} />
+                        <Route path="" element={<Home />} />
+                        <Route path="*" element={<Page404 />} />
+                    </Routes>
+                </div>
             </BrowserRouter>
         </div>
     );
