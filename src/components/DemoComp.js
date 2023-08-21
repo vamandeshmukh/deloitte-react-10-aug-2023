@@ -9,16 +9,16 @@ const DemoComp = () => {
         { eid: 103, firstName: 'Tonu', salary: 12.50 }
     ]);
 
-    // useInsertionEffect
-
     return (
         <div>
             <h1>Demo Component</h1>
             <p>This is demo component.</p>
             {/* <p>Employee data: {empData.firstName}</p>
             <p>Employee data: {empData.salary}</p> */}
-            <p>{empList[0].eid}{empList[0].firstName}{empList[0].salary}</p>
-            
+            <p> {empList.map((e) => {
+                return <div><span>{e.eid}</span><span>{e.firstName}</span><span>{e.salary}</span></div>
+            })
+            } </p>
 
         </div>
     );
