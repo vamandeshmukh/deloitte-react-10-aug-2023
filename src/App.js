@@ -2,21 +2,15 @@
 import DemoComp from "./components/DemoComp";
 import Parent from "./components/Parent";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from "./components/Home";
+import AppRoutes from './AppRoutes';
 
 function App() {
   console.log('App');
 
   return (
     <div>
-      <div>
-        <div className="container">
-          <h1>App Component</h1>
-          <p>This is App component.</p>
-        </div>
-        {/* <Parent /> */}
-        <DemoComp />
-        {/* <DemoComp /> */}
-      </div>
+      <AppRoutes />
     </div>
   );
 
