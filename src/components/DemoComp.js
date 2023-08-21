@@ -13,8 +13,7 @@ const DemoComp = () => {
         <div>
             <h1>Demo Component</h1>
             <p>This is demo component.</p>
-            {/* <p>Employee data: {empData.firstName}</p>
-            <p>Employee data: {empData.salary}</p> */}
+            <p>EID NAME SALARY</p>
             <p> {empList.map((e) => {
                 return <div><span>{e.eid}</span><span>{e.firstName}</span><span>{e.salary}</span></div>
             })
