@@ -1,3 +1,4 @@
+
 import DemoComp from "./components/DemoComp";
 
 function App() {
@@ -13,6 +14,16 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
 
 
 // components, JSX, state, props 
