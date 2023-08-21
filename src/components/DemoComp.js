@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 
 const DemoComp = () => {
@@ -18,10 +20,8 @@ const DemoComp = () => {
                 return <div><span>{e.eid}</span><span>{e.firstName}</span><span>{e.salary}</span></div>
             })
             } </p>
-
         </div>
     );
-
 };
 
 export default DemoComp;

@@ -3,14 +3,17 @@ import DemoComp from "./components/DemoComp";
 import Parent from "./components/Parent";
 
 function App() {
+  console.log('App');
 
   return (
     <div>
-      <h1>App Component</h1>
-      <p>This is App component.</p>
-      {/* <Parent /> */}
-      <DemoComp />
-      {/* <DemoComp /> */}
+      <div>
+        <h1>App Component</h1>
+        <p>This is App component.</p>
+        {/* <Parent /> */}
+        <DemoComp />
+        {/* <DemoComp /> */}
+      </div>
     </div>
   );
 
