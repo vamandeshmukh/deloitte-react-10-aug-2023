@@ -10,7 +10,7 @@ const Header = () => {
             <Link to='/home'><img height={'30px'} src="https://logodix.com/logo/64729.png" /> </Link>
             <Link to='/demo'>Demo</Link>
             <Link to='/parent'>Parent</Link>
-
+            {/* create more components and add them here  */}
         </div>
     );
 
