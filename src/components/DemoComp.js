@@ -16,7 +16,7 @@ const DemoComp = () => {
             <p>This is demo component.</p>
             <p>Eid {eid} </p>
             <p>Eid2 {eid2} </p>
-            <button onClick={updateEid}>Update Values</button>
+            <button onClick={updateEid}>Update</button>
         </div>
     );
 

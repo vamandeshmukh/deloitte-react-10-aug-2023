@@ -8,6 +8,7 @@ function App() {
       <h1>App Component</h1>
       <p>This is App component.</p>
       <DemoComp />
+      <DemoComp />
     </div>
   );
 
