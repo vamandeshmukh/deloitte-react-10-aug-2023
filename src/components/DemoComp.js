@@ -1,28 +1,58 @@
-import { useState } from "react";
+import { useInsertionEffect, useState } from "react";
 
 const DemoComp = () => {
 
-    const [eid, setEid] = useState(1);
-    let eid2 = 2;
+    // const [empData, setEmpData] = useState({ eid: 101, firstName: 'Sonu', salary: 10.50 });
+    const [empList, setEmpList] = useState([
+        { eid: 101, firstName: 'Sonu', salary: 10.50 },
+        { eid: 102, firstName: 'Monu', salary: 15.50 },
+        { eid: 103, firstName: 'Tonu', salary: 12.50 }
+    ]);
 
-    const updateEid = () => {
-        setEid(eid + 1);
-        eid2 += 1;
-    };
+    // useInsertionEffect
 
     return (
         <div>
             <h1>Demo Component</h1>
             <p>This is demo component.</p>
-            <p>Eid {eid} </p>
-            <p>Eid2 {eid2} </p>
-            <button onClick={updateEid}>Update</button>
+            {/* <p>Employee data: {empData.firstName}</p>
+            <p>Employee data: {empData.salary}</p> */}
+            <p>{empList[0].eid}{empList[0].firstName}{empList[0].salary}</p>
+            
+
         </div>
     );
 
 };
 
 export default DemoComp;
+
+
+// import { useState } from "react";
+
+// const DemoComp = () => {
+
+//     const [eid, setEid] = useState(1);
+//     let eid2 = 2;
+
+//     const updateEid = () => {
+//         setEid(eid + 1);
+//         eid2 += 1;
+//     };
+
+//     return (
+//         <div>
+//             <h1>Demo Component</h1>
+//             <p>This is demo component.</p>
+//             <p>Eid {eid} </p>
+//             <p>Eid2 {eid2} </p>
+//             <button onClick={updateEid}>Update</button>
+//         </div>
+//     );
+
+// };
+
+// export default DemoComp;
 
 
 

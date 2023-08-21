@@ -8,8 +8,8 @@ function App() {
     <div>
       <h1>App Component</h1>
       <p>This is App component.</p>
-      <Parent />
-      {/* <DemoComp /> */}
+      {/* <Parent /> */}
+      <DemoComp />
       {/* <DemoComp /> */}
     </div>
   );
