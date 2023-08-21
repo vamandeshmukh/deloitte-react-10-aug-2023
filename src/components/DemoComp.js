@@ -13,10 +13,10 @@ const DemoComp = () => {
     };
 
     const handleEmpSubmit = (evt) => {
-        evt.preventDefault();
         console.log(empData);
         alert('Sobmitted!');
         setEmpData({ eid: '', firstName: '', salary: '' });
+        evt.preventDefault();
     };
 
     return (
