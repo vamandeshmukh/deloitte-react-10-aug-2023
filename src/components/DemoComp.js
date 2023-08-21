@@ -6,19 +6,50 @@ const DemoComp = () => {
 
     const [empData, setEmpData] = useState({ eid: '', firstName: '', salary: '' });
 
+    const handleEmpInput = (evt) => {
+        console.log(evt.target.name);
+        console.log(evt.target.value);
+        setEmpData({ ...empData, [evt.target.name]: evt.target.value });
+    };
+
+    const handleEmpSubmit = (evt) => {
+        evt.preventDefault();
+        console.log(empData);
+        alert('Sobmitted!');
+        setEmpData({ eid: '', firstName: '', salary: '' });
+    };
+
     return (
         <div>
             <h1>Demo Component</h1>
             <p>This is demo component.</p>
             <div>
-                <form>
+                <form onSubmit={handleEmpSubmit}>
+                    <input type={'number'} name="eid" value={empData.eid}
+                        onChange={handleEmpInput} placeholder="Eid" />
+                    <input type={'text'} name="firstName" value={empData.firstName}
+                        onChange={handleEmpInput} placeholder="First name" />
+                    <input type={'number'} name="salary" value={empData.salary}
+                        onChange={handleEmpInput} placeholder="salary" />
+                    <input type={'submit'} value="Submit" />
+                </form>
+                {/* <form >
+                    <input type={'number'} name="eid" value={empData.eid}
+                        onChange={handleEmpInput} placeholder="Eid" />
+                    <input type={'text'} name="firstName" value={empData.firstName}
+                        onChange={handleEmpInput} placeholder="First name" />
+                    <input type={'number'} name="salary" value={empData.salary}
+                        onChange={handleEmpInput} placeholder="salary" />
+                    <input type={'button'} value="Submit" onClick={handleEmpSubmit} />
+                </form> */}
+                {/* <form>
                     <input type={'number'} name="eid" value={empData.eid}
                         onChange={(evt) => { setEmpData({ eid: evt.target.value }); }} placeholder="Eid" />
                     <input type={'text'} name="firstName" value={empData.firstName}
                         onChange={(evt) => { setEmpData({ firstName: evt.target.value }); }} placeholder="First name" />
                     <input type={'number'} name="salary" value={empData.salary}
                         onChange={(evt) => { setEmpData({ salary: evt.target.value }); }} placeholder="salary" />
-                </form>
+                </form> */}
             </div>
 
             <div>
