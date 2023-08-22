@@ -19,7 +19,6 @@ const SearchBlog = () => {
         // setSearchValue('');
     };
 
-
     return (
         <div>
             <form className="d-flex" role="search" onSubmit={submitSearch}>

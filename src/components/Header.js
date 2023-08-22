@@ -3,6 +3,9 @@ import SearchBlog from "./SearchBlog";
 
 const Header = () => {
 
+    const num = new Date().getSeconds();
+    console.log(num);
+
     // assignment - 
     // use this navbar for proper styling - 
     // https://getbootstrap.com/docs/5.3/components/navbar/
@@ -30,12 +33,12 @@ const Header = () => {
                                 <Link className="nav-link" to="/bloglist">All Blogs</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/blog">Blog of the Day</Link>
+                                <Link className="nav-link" to={`/blog/${num}`}>Blog of the Day</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/write">Write a Blog</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/demo">Demo</Link>
                             </li>
                             <li className="nav-item">
@@ -43,13 +46,13 @@ const Header = () => {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="#">CompN</Link>
-                            </li>
+                            </li> */}
                         </ul>
-                        {/* <form className="d-flex" role="search">
+                        <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" />
                             <button className="btn btn-outline-primary" type="submit">Search</button>
-                        </form> */}
-                        <SearchBlog />
+                        </form>
+                        {/* <SearchBlog /> */}
                     </div>
                 </div>
             </nav>
