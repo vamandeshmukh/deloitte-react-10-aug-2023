@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SearchBlog from "./SearchBlog";
 
 const Header = () => {
 
@@ -29,7 +30,10 @@ const Header = () => {
                                 <Link className="nav-link" to="/bloglist">All Blogs</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/blog">Blog</Link>
+                                <Link className="nav-link" to="/blog">Blog of the Day</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/write">Write a Blog</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/demo">Demo</Link>
@@ -41,10 +45,11 @@ const Header = () => {
                                 <Link className="nav-link" to="#">CompN</Link>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
+                        {/* <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" />
                             <button className="btn btn-outline-primary" type="submit">Search</button>
-                        </form>
+                        </form> */}
+                        <SearchBlog />
                     </div>
                 </div>
             </nav>

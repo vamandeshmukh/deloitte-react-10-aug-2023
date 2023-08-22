@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Page404 from "./components/Page404";
 import Parent from "./components/Parent";
+import WriteBlog from "./components/WriteBlog";
 
 const AppRoutes = () => {
 
@@ -23,6 +24,7 @@ const AppRoutes = () => {
                         <Route path="home" element={<Home />} />
                         <Route path="demo" element={<DemoComp />} />
                         <Route path="parent" element={<Parent />} />
+                        <Route path="write" element={<WriteBlog />} />
                         <Route path="" element={<Home />} />
                         <Route path="*" element={<Page404 />} />
                     </Routes>
