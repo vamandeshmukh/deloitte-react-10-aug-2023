@@ -1,12 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const url = 'https://jsonplaceholder.typicode.com/comments/';
-// https://jsonplaceholder.typicode.com/comments?postId=1
 
 const Comments = (props) => {
-    console.log(props.postId);
 
+    const url = 'https://jsonplaceholder.typicode.com/comments/';
     const [commentsList, setCommentsList] = useState([]);
 
     useEffect(() => {
@@ -25,7 +23,7 @@ const Comments = (props) => {
                     commentsList.map((com, i) => {
                         return <div obj={com} key={i}>
                             <p><a href={`mailto:${com.email}`}>{com.email}</a></p>
-                            <p>{com.name}</p>
+                            <p className="fw-bold">{com.name}</p>
                             <p>{com.body}</p>
                             <hr />
                         </div>

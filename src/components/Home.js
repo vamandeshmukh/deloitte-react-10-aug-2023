@@ -18,7 +18,7 @@ const Home = () => {
                         <div style={{ minHeight: "100vh" }} className="container">
                             <div>
                                 <p className="display-4 text-primary pt-5">Deloitte React App</p>
-                                <Link className="lead text-white" style={{ textDecoration: 'none' }} to='/demo'>Enter...</Link>
+                                <Link className="lead text-white" style={{ textDecoration: 'none' }} to='/bloglist'>Enter...</Link>
                             </div>
                         </div>
                     </div>
