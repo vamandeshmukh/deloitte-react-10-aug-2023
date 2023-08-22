@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 const url = 'https://jsonplaceholder.typicode.com/comments/';
 // https://jsonplaceholder.typicode.com/comments?postId=1
 
-const Comments = (postId) => {
-    console.log(postId.postId);
+const Comments = (props) => {
+    console.log(props.postId);
 
     const [commentsList, setCommentsList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${url}?postId=${postId.postId}`)
+        axios.get(`${url}?postId=${props.postId}`)
             .then((resp) => { setCommentsList(resp.data); })
             .catch(err => console.log(err));
     }, []);
