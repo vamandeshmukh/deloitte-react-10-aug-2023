@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BlogDetails from "./components/BlogDetails";
 import DemoComp from "./components/DemoComp";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -15,6 +16,7 @@ const AppRoutes = () => {
                 </div>
                 <div>
                     <Routes>
+                        <Route path="blog" element={<BlogDetails />} />
                         <Route path="home" element={<Home />} />
                         <Route path="demo" element={<DemoComp />} />
                         <Route path="parent" element={<Parent />} />
