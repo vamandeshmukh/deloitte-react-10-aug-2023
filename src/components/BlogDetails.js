@@ -6,7 +6,7 @@ const url = 'https://jsonplaceholder.typicode.com/posts/22';
 
 const BlogDetails = () => {
 
-    const [blogData, setBlogData] = useState({ title: '', body: '' });
+    const [blogData, setBlogData] = useState({ id: '', title: '', body: '' });
 
     useEffect(() => {
         axios.get(url)
@@ -30,15 +30,15 @@ const BlogDetails = () => {
                     }
                 </div>
                 {/* increase the blog text  */}
-                {/* <p>{Array.from(blogData.title).map((blog, i) => {
+                <p>{Array.from(blogData.title).map((blog, i) => {
                     return <span obj={blog} key={i}> {blogData.body} </span>;
-                })}</p> */}
-                <p>{Array.from(blogData.title).map(() => {
-                    return <span> {blogData.body} </span>;
                 })}</p>
+                {/* <p>{Array.from(blogData.title).map(() => {
+                    return <span> {blogData.body} </span>;
+                })}</p> */}
             </div>
             <div>
-                {blogData &&
+                {blogData.id &&
                     <Comments postId={blogData.id} />
                 }
             </div>
