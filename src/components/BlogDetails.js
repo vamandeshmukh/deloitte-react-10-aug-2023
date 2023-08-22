@@ -24,11 +24,12 @@ const BlogDetails = () => {
                 <hr />
                 <p className="lead"></p>
                 <div>
-                    {
+                    {/* {
                         blogData.title &&
                         <img width="100%" src="https://picsum.photos/900/400" alt={blogData.title} />
-                    }
+                    } */}
                 </div>
+                <p>{blogData.body}</p>
                 {/* increase the blog text  */}
                 <p>{Array.from(blogData.title).map((blog, i) => {
                     return <span obj={blog} key={i}> {blogData.body} </span>;
