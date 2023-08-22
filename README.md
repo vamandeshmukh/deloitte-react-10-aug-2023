@@ -4,7 +4,7 @@ For basics go to [React Basics](https://react.dev/learn)
 
 For Quick notes go to [React 16.8 Notes](https://docs.google.com/document/d/1fsfvppIUA0_dGXGICN-Ia_vT_uFAO-mQiQuBU5sLuv8/edit)
 
-- Vaman Deshmukh 
+Vaman Deshmukh 
 ----------------------------------------
 
 # Getting Started with Create React App
