@@ -1,10 +1,15 @@
 # Deloitte React App
 
-For basics go to [React Basics](https://react.dev/learn)
+For React basics go to [React Basics](https://react.dev/learn)
+
+For Redux basics go to [Redux Basics](https://redux-toolkit.js.org/tutorials/quick-start)
+
+For React services guide go to [React Services](https://medium.com/nerd-for-tech/react-js-services-854be54a6ba1)
 
 For Quick notes go to [React 16.8 Notes](https://docs.google.com/document/d/1fsfvppIUA0_dGXGICN-Ia_vT_uFAO-mQiQuBU5sLuv8/edit)
 
-Vaman Deshmukh 
+-- Vaman Deshmukh 
+
 ----------------------------------------
 
 # Getting Started with Create React App
