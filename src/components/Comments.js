@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const url = 'https://jsonplaceholder.typicode.com/comments/';
 
 const Comments = (postId) => {
+    console.log(postId);
 
     const [commentsList, setCommentsList] = useState([]);
 
@@ -15,11 +16,12 @@ const Comments = (postId) => {
 
     return (
         <div>
-            <p>Comments</p>
-            {/* <p>{commentsList && commentsList[0].body}</p> */}
+            <p className="lead"> {commentsList.length} Comments</p>
+            <hr />
             <div>
-                {commentsList &&
-                    commentsList.map((com) => { <div><p>{com.name}</p><p>{com.body}</p></div> })
+                {
+                    commentsList &&
+                    commentsList.map((com) => { return <div><p>{com.name}</p><p>{com.body}</p></div> })
                 }
             </div>
         </div>
