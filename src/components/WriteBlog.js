@@ -10,6 +10,7 @@ const WriteBlog = () => {
         console.log(evt.target.value);
         setNewBlog({ ...newBlog, [evt.target.name]: evt.target.value });
     };
+
     const submitBlogForm = (evt) => {
         axios.post(url, newBlog)
             .then((resp) => {
