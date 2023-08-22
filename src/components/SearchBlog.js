@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
+// guide - 
+// https://reactrouter.com/en/main/hooks/use-navigate
+
 const SearchBlog = () => {
 
     const [searchValue, setSearchValue] = useState('');
