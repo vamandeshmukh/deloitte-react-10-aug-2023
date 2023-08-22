@@ -60,7 +60,7 @@ export default BlogDetails;
 // import { useEffect, useState } from "react";
 // import Comments from "./Comments";
 
-// const url = 'https://jsonplaceholder.typicode.com/posts/22';
+// const url = 'https://jsonplaceholder.typicode.com/posts/50';
 
 // const BlogDetails = () => {
 
