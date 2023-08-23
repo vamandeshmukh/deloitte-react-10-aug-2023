@@ -9,9 +9,9 @@
 // 5. Wherever needed, access data from the store 
 
 
-import WriterReducer from './WriterSlice';
 
-const { configureStore } = require("@reduxjs/toolkit");
+import { configureStore } from "@reduxjs/toolkit";
+import WriterReducer from './WriterSlice';
 
 console.log('store');
 

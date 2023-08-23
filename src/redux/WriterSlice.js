@@ -1,5 +1,5 @@
 
-const { createSlice } = require("@reduxjs/toolkit");
+import { createSlice } from "@reduxjs/toolkit";
 
 // const WriterSlice = createSlice();
 // const WriterSlice = createSlice({name: '', initialState: {}, reducers: {}});
