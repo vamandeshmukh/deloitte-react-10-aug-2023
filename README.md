@@ -1,8 +1,10 @@
 # Assignment 
 Study - 
 Study the example of redux used for BlogWriter component 
+
 Do - 
 Use redux for the components - 
+
 1. BlogList 
 2. BlogDetails 
 
