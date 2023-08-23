@@ -1,1 +1,4 @@
-console.log('abc');
+
+const { createSlice } = require("@reduxjs/toolkit");
+
+const WriterSlice = createSlice();
