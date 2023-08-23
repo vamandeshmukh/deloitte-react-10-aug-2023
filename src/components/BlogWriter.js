@@ -13,7 +13,6 @@ const BlogWriter = (props) => {
         getWriterByBlogId(props.writerId)
             .then((resp) => {
                 console.log(resp.data);
-                // setWriterObj(dispatch(resp.data));
                 dispatch(setWriterObj(resp.data));
 
             })
