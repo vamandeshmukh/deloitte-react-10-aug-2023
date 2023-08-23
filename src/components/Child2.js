@@ -29,6 +29,7 @@ const Child2 = (props) => {
     // useEffect(() => { }, []);
 
     useEffect(() => {
+        console.log(props);
         setCh1DataInCh2(props.ch1ToCh2);
     },
         [props]);
