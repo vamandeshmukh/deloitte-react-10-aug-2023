@@ -1,14 +1,13 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getAllBlogs } from '../services/BlogService';
 
 const BlogList = () => {
 
-    const url = 'https://jsonplaceholder.typicode.com/posts';
     const [allBlogslist, setAllBlogsList] = useState([]);
 
     useEffect(() => {
-        axios.get(url)
+        getAllBlogs()
             .then(resp => setAllBlogsList(resp.data))
             .catch(err => console.log(err));
     },
