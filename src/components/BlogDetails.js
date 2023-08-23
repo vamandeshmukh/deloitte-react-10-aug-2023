@@ -17,7 +17,7 @@ const BlogDetails = () => {
                 setBlogData(resp.data);
             })
             .catch((err) => { console.log(err); });
-    }, []);
+    });
 
     return (
 

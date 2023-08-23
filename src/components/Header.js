@@ -40,11 +40,11 @@ const Header = () => {
                             </li>
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/demo">Demo</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <Link className="nav-link" to="/parent">Parent</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="#">CompN</Link>
                             </li> */}
                         </ul>
