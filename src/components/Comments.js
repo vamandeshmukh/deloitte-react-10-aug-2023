@@ -1,14 +1,12 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { getCommentsByBlogId } from '../services/CommentService';
 
 const Comments = (props) => {
 
-    const url = 'https://jsonplaceholder.typicode.com/comments/';
     const [commentsList, setCommentsList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${url}?postId=${props.postId}`)
+        getCommentsByBlogId(props.postId)
             .then((resp) => { setCommentsList(resp.data); })
             .catch(err => console.log(err));
     }, []);

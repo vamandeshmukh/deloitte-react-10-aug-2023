@@ -1,17 +1,16 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { getBlogById } from "../services/BlogService";
 import Comments from "./Comments";
 
 
 const BlogDetails = () => {
 
     const blogParam = useParams();
-    const url = 'https://jsonplaceholder.typicode.com/posts';
     const [blogData, setBlogData] = useState({ id: '', title: '', body: '' });
 
     useEffect(() => {
-        axios.get(url + '/' + blogParam.id)
+        getBlogById(blogParam.id)
             .then((resp) => {
                 console.log(resp.data);
                 setBlogData(resp.data);

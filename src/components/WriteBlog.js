@@ -1,9 +1,8 @@
-import axios from "axios";
 import { useState } from "react";
+import { addNewBlog } from "../services/BlogService";
 
 const WriteBlog = () => {
 
-    const url = 'https://jsonplaceholder.typicode.com/posts/';
     const [newBlog, setNewBlog] = useState({ id: '', title: '', body: '' });
 
     const enterBlogForm = (evt) => {
@@ -12,7 +11,8 @@ const WriteBlog = () => {
     };
 
     const submitBlogForm = (evt) => {
-        axios.post(url, newBlog)
+
+        addNewBlog(newBlog)
             .then((resp) => {
                 alert(resp.data.title + ' published successfully!');
                 setNewBlog({ id: '', title: '', body: '' });

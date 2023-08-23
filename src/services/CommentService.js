@@ -1,2 +1,10 @@
+import axios from "axios";
 
-export const CommentService = '';
+const commentUrl = 'https://jsonplaceholder.typicode.com/comments';
+
+const getCommentsByBlogId = (blogId) => {
+    console.log(blogId);
+    return axios.get(`${commentUrl}?postId=${blogId}`);
+};
+
+export { getCommentsByBlogId };
