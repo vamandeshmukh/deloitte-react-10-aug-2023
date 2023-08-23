@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import store from "../redux/Store";
 import Child from "./Child";
 import Child2 from "./Child2";
 
 const Parent = () => {
 
     const [childDataInParent, setChildDataInParent] = useState('');
+
+    const dataFromStore = useSelector((store) => { return store.writer.writerObj });
+
+    useEffect(() => {
+        console.log(dataFromStore);
+    },
+        [dataFromStore]);
 
     // call to this funciotn 
     const getChildData = (arg) => {
@@ -16,8 +25,8 @@ const Parent = () => {
         <div>
             <h1>Parent Component</h1>
             <p>Parent component</p>
-            <Child getData={getChildData} />
-            <Child2 ch1ToCh2={childDataInParent} />
+            {/* <Child getData={getChildData} /> */}
+            {/* <Child2 ch1ToCh2={childDataInParent} /> */}
             {/* {
                 childDataInParent &&
                 <Child2 ch1ToCh2={childDataInParent} />
