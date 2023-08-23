@@ -1,3 +1,14 @@
+# Assignment 
+Study - 
+Study the example of redux used for BlogWriter component 
+Do - 
+Use redux for the components - 
+1. BlogList 
+2. BlogDetails 
+
+-------------------------------------------------
+
+
 # Deloitte React App
 
 For React basics go to [React Basics](https://react.dev/learn)
