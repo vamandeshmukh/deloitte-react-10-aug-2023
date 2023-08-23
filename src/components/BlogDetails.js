@@ -8,7 +8,7 @@ import Comments from "./Comments";
 const BlogDetails = () => {
 
     const blogParam = useParams();
-    const [blogData, setBlogData] = useState({ id: '', title: '', body: '' });
+    const [blogData, setBlogData] = useState({ id: '', title: '', body: '', userId: '' });
 
     useEffect(() => {
         getBlogById(blogParam.id)
@@ -36,8 +36,10 @@ const BlogDetails = () => {
                                 <img width="100%" src="https://picsum.photos/900/400" alt={blogData.title} />
                             }
                         </div>
-                        <div>
-                            <BLogWriter />
+                        <div> {
+                            blogData.userId &&
+                            <BLogWriter writerId={blogData.userId} />
+                        }
                         </div>
                         <p>{Array.from(blogData.title).map((blog, i) => {
                             return <span obj={blog} key={i}> {blogData.body} </span>;
