@@ -1,18 +1,48 @@
+import { useState } from "react";
 import Child from "./Child";
 import Child2 from "./Child2";
 
 const Parent = () => {
 
+    const [childDataInParent, setChildDataInParent] = useState('');
+
+    // call to this funciotn 
+    const getChildData = (arg) => {
+        console.log(arg);
+        setChildDataInParent(arg);
+    };
+
     return (
         <div>
             <h1>Parent Component</h1>
             <p>Parent component</p>
-            <Child />
-            <Child2 />
+            <Child getData={getChildData} />
+            <Child2 ch1ToCh2={childDataInParent} />
+            {/* {
+                childDataInParent &&
+                <Child2 ch1ToCh2={childDataInParent} />
+            } */}
         </div>
     );
 };
 export default Parent;
+
+
+// import Child from "./Child";
+// import Child2 from "./Child2";
+
+// const Parent = () => {
+
+//     return (
+//         <div>
+//             <h1>Parent Component</h1>
+//             <p>Parent component</p>
+//             <Child />
+//             <Child2 />
+//         </div>
+//     );
+// };
+// export default Parent;
 
 
 // import { useState } from "react";
