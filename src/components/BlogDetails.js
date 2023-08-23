@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getBlogById } from "../services/BlogService";
+import BLogWriter from "./BlogWriter";
 import Comments from "./Comments";
 
 
@@ -34,6 +35,9 @@ const BlogDetails = () => {
                                 blogData.title &&
                                 <img width="100%" src="https://picsum.photos/900/400" alt={blogData.title} />
                             }
+                        </div>
+                        <div>
+                            <BLogWriter />
                         </div>
                         <p>{Array.from(blogData.title).map((blog, i) => {
                             return <span obj={blog} key={i}> {blogData.body} </span>;
