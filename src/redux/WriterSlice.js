@@ -6,6 +6,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const WriterSlice = createSlice(
     {
+        // store.writer.writerObj 
+
         name: 'writer',
 
         initialState: {

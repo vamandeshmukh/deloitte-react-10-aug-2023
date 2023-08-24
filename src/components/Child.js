@@ -1,8 +1,8 @@
-import { useState } from "react";
 
 const Child = (props) => {
 
-    const [childData, setChildData] = useState('Monu');
+    // const [childData, setChildData] = useState('Monu');
+    const childData = 'Monu';
 
     const sendDataToParent = () => {
         console.log(childData);

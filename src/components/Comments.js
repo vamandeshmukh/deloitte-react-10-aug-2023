@@ -9,7 +9,7 @@ const Comments = (props) => {
         getCommentsByBlogId(props.postId)
             .then((resp) => { setCommentsList(resp.data); })
             .catch(err => console.log(err));
-    }, []);
+    }, [props.postId]);
 
     return (
         <div>
@@ -33,3 +33,4 @@ const Comments = (props) => {
 };
 
 export default Comments;
+

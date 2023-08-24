@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setWriterObj } from '../redux/WriterSlice';
 import { getWriterByBlogId } from '../services/WriterService';
@@ -18,7 +18,7 @@ const BlogWriter = (props) => {
             })
             .catch(err => console.log(err));
 
-    }, []);
+    }, [dispatch, props.writerId]);
 
     return (
         <div>

@@ -1,5 +1,5 @@
 // using redux 
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getAllBlogs } from '../services/BlogService';
@@ -18,7 +18,7 @@ const BlogList = () => {
             })
             .catch(err => console.log(err));
     },
-        []);
+        [dispatch]);
 
     return (
         <div className="container">

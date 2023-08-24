@@ -6,7 +6,21 @@
 
 Create an online shopping app using online fake API web services. 
 
-- Use: [Fake Store API](https://fakestoreapi.com/docs)
+- Use: [Fake Store API](https://fakestoreapi.com/docs) or any other API
+
+- Mandatory - 
+
+Home Component 
+
+View All Products 
+
+Product Component 
+
+Cart Component 
+
+Checkout Component 
+
+
 
 
 -------------------------------------------------
