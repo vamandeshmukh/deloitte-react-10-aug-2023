@@ -1,4 +1,4 @@
-## Capstone Project - 
+# Capstone Project - 
 
 - Each team to have 3-4 members 
 
@@ -8,9 +8,11 @@ Create an online shopping app using online fake API web services.
 
 - Use: [Fake Store API](https://fakestoreapi.com/docs)
 
+
 -------------------------------------------------
 
-## Assignment 
+# Assignment 
+
 Study - 
 
 Study the example of redux used for BlogWriter component 
