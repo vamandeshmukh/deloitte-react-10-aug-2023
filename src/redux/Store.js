@@ -12,6 +12,7 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import WriterReducer from './WriterSlice';
+import BlogListReducer from './BlogListSlice';
 
 console.log('store');
 
@@ -20,9 +21,8 @@ console.log('store');
 
 const store = configureStore({
     reducer: {
-        writer: WriterReducer
-        // ,
-        // blogList: BlogListReducer,
+        writer: WriterReducer,
+        blogList: BlogListReducer,
         // anyComponent: AnyComponentReducer
     }
 });
