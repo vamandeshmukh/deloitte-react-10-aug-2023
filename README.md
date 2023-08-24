@@ -1,3 +1,14 @@
+## Capstone Project - 
+
+- Each team to have 3-4 members 
+
+## Project abstract 
+
+Create an online shopping app using online fake API web services. 
+
+- Use: [Fake Store API](https://fakestoreapi.com/docs)
+
+
 ## Assignment 
 Study - 
 
